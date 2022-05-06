@@ -16,7 +16,7 @@
 		26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8212E28214469006EB4A9 /* EventViewController.swift */; };
 		26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B82132282144DD006EB4A9 /* DetailViewController.swift */; };
 		26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8213428214541006EB4A9 /* ReservationViewController.swift */; };
-		327BF4F62824AFF200D8E744 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BF4F52824AFF200D8E744 /* Events.swift */; };
+		327BF4F82824BB8600D8E744 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BF4F72824BB8600D8E744 /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		26B8212E28214469006EB4A9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
-		327BF4F52824AFF200D8E744 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		327BF4F72824BB8600D8E744 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 		327BF4F42824AFB000D8E744 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				327BF4F52824AFF200D8E744 /* Events.swift */,
+				327BF4F72824BB8600D8E744 /* Event.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 				26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */,
 				26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */,
 				265749082820205800637A7B /* AppDelegate.swift in Sources */,
-				327BF4F62824AFF200D8E744 /* Events.swift in Sources */,
 				2657490A2820205800637A7B /* SceneDelegate.swift in Sources */,
+				327BF4F82824BB8600D8E744 /* Event.swift in Sources */,
 				26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
