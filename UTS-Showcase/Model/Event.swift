@@ -14,4 +14,8 @@ struct Event: Codable {
     var time: String
     var location: String
     var description: String
+    
+    var noOfTickets: Int
 }
+
+//add events details
