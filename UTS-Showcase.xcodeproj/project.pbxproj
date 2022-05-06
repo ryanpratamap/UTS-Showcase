@@ -16,6 +16,7 @@
 		26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8212E28214469006EB4A9 /* EventViewController.swift */; };
 		26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B82132282144DD006EB4A9 /* DetailViewController.swift */; };
 		26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8213428214541006EB4A9 /* ReservationViewController.swift */; };
+		327BF4F62824AFF200D8E744 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BF4F52824AFF200D8E744 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		26B8212E28214469006EB4A9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		327BF4F52824AFF200D8E744 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 		265749062820205800637A7B /* UTS-Showcase */ = {
 			isa = PBXGroup;
 			children = (
-				266B3D99282131AE00B202A4 /* Model */,
+				327BF4F42824AFB000D8E744 /* Model */,
 				266B3D98282131A500B202A4 /* View */,
 				266B3D972821319A00B202A4 /* Controller */,
 				265749072820205800637A7B /* AppDelegate.swift */,
@@ -93,9 +95,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		266B3D99282131AE00B202A4 /* Model */ = {
+		327BF4F42824AFB000D8E744 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				327BF4F52824AFF200D8E744 /* Events.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */,
 				26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */,
 				265749082820205800637A7B /* AppDelegate.swift in Sources */,
+				327BF4F62824AFF200D8E744 /* Events.swift in Sources */,
 				2657490A2820205800637A7B /* SceneDelegate.swift in Sources */,
 				26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */,
 			);
