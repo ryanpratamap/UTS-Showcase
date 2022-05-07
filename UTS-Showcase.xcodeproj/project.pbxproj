@@ -13,6 +13,7 @@
 		2657490F2820205800637A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2657490D2820205800637A7B /* Main.storyboard */; };
 		265749112820205E00637A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265749102820205E00637A7B /* Assets.xcassets */; };
 		265749142820205E00637A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265749122820205E00637A7B /* LaunchScreen.storyboard */; };
+		26740A9528268E0C00D53E67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A9428268E0C00D53E67 /* ProfileViewController.swift */; };
 		26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8212E28214469006EB4A9 /* EventViewController.swift */; };
 		26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B82132282144DD006EB4A9 /* DetailViewController.swift */; };
 		26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8213428214541006EB4A9 /* ReservationViewController.swift */; };
@@ -28,6 +29,7 @@
 		265749102820205E00637A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		265749132820205E00637A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265749152820205E00637A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26740A9428268E0C00D53E67 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		26B8212E28214469006EB4A9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				26B8212E28214469006EB4A9 /* EventViewController.swift */,
 				26B82132282144DD006EB4A9 /* DetailViewController.swift */,
 				26B8213428214541006EB4A9 /* ReservationViewController.swift */,
+				26740A9428268E0C00D53E67 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				265749082820205800637A7B /* AppDelegate.swift in Sources */,
 				2657490A2820205800637A7B /* SceneDelegate.swift in Sources */,
 				327BF4F82824BB8600D8E744 /* Event.swift in Sources */,
+				26740A9528268E0C00D53E67 /* ProfileViewController.swift in Sources */,
 				26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
