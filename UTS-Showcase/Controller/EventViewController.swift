@@ -23,7 +23,7 @@ class EventViewController: UIViewController {
         // Do any additional setup after loading the view.
         //welcomeLabel.text = "Welcome, \(name!)!"
         writeEvents()
-        
+        eventTableView.rowHeight = 225
         events = readEvents()
     }
 
