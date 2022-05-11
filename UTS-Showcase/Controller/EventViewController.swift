@@ -35,7 +35,7 @@ class EventViewController: UIViewController {
         //if (name != nil) {
         //updatedHighScoreFromGame.append(GameScore(name: name!, score: score!))
         let updatedEvents = (
-            [Event(title: "Engineering Prototype Exhibition", date: "June 28, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "Engineering",  noOfTickets: 0), Event(title: "Architecture Prototype Exhibition", date: "June 29, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "Architecture", noOfTickets: 0), Event(title: "IT Prototype Exhibition", date: "June 27, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "IT", noOfTickets: 0)]
+            [Event(title: "Engineering Prototype Exhibition", date: "June 28, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "Engineering",  noOfTickets: 1), Event(title: "Architecture Prototype Exhibition", date: "June 29, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "Architecture", noOfTickets: 1), Event(title: "IT Prototype Exhibition", date: "June 27, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "IT", noOfTickets: 1)]
         )
         //}
         

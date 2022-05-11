@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     var detailLocation: String?
     var detailDescription: String?
     var detailImageName: String?
-    var detailNumberOfTickets = 0
+    var detailNumberOfTickets = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +36,14 @@ class DetailViewController: UIViewController {
         eventDetailLocation.text = "Where: " + detailLocation!
         eventDetailDescription.text = detailDescription
         eventDetailImageView.image = UIImage(named: detailImageName!)
-        
-        /*detailNumberOfTickets = Int(ticketQuantityStepper.value)
-        
-        numberOfTicketsLabel.text = "Number of Tickets: " + String(detailNumberOfTickets)*/
+        numberOfTicketsLabel.text = "Number of Tickets: " + String(detailNumberOfTickets)
     }
-
+    
+    @IBAction func ticketQtyStepper(_ sender: UIStepper) {
+        detailNumberOfTickets = Int(sender.value)
+        
+        numberOfTicketsLabel.text = "Number of Tickets: " + String(detailNumberOfTickets)
+        
+    }
+    
 }
