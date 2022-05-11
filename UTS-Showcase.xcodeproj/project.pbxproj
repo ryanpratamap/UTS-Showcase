@@ -18,6 +18,7 @@
 		26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B82132282144DD006EB4A9 /* DetailViewController.swift */; };
 		26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8213428214541006EB4A9 /* ReservationViewController.swift */; };
 		327BF4F82824BB8600D8E744 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BF4F72824BB8600D8E744 /* Event.swift */; };
+		4F435969282B8F66006F846F /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F435968282B8F66006F846F /* EventsTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		327BF4F72824BB8600D8E744 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4F435968282B8F66006F846F /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				26B82132282144DD006EB4A9 /* DetailViewController.swift */,
 				26B8213428214541006EB4A9 /* ReservationViewController.swift */,
 				26740A9428268E0C00D53E67 /* ProfileViewController.swift */,
+				4F435968282B8F66006F846F /* EventsTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2657490C2820205800637A7B /* LoginViewController.swift in Sources */,
+				4F435969282B8F66006F846F /* EventsTVC.swift in Sources */,
 				26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */,
 				26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */,
 				265749082820205800637A7B /* AppDelegate.swift in Sources */,

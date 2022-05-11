@@ -24,10 +24,10 @@ class LoginViewController: UIViewController {
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         /*if segue.identifier == "goToEvents" {
             let VC = segue.destination as! EventViewController
             VC.name = nameTextField.text!
         }*/
-    }
+    //}
 }
