@@ -46,4 +46,9 @@ class DetailViewController: UIViewController {
         
     }
     
+    @IBAction func reserveButtonPressed(_ sender: UIButton) {
+        reservationButton.isEnabled = false
+        
+        reservationButton.setTitle("Reserved", for: .normal)
+    }
 }

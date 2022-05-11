@@ -321,6 +321,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Reserve">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="reserveButtonPressed:" destination="cuJ-01-S3c" eventType="touchUpInside" id="cR1-SR-Kh8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Tickets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKJ-Cg-xiq">
                                 <rect key="frame" x="24" y="631" width="261" height="22"/>
