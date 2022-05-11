@@ -16,7 +16,6 @@ class EventViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     //var name:String?
     var events: [Event] = []
-    var eventImages = ["Engineering", "IT", "Architecture"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
