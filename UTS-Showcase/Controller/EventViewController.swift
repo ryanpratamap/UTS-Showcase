@@ -35,7 +35,7 @@ class EventViewController: UIViewController {
         //if (name != nil) {
         //updatedHighScoreFromGame.append(GameScore(name: name!, score: score!))
         let updatedEvents = (
-            [Event(title: "Engineering Prototype Exhibition", date: "June 28, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", noOfTickets: 0), Event(title: "Architecture Prototype Exhibition", date: "June 29, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", noOfTickets: 0), Event(title: "IT Prototype Exhibition", date: "June 27, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", noOfTickets: 0)]
+            [Event(title: "Engineering Prototype Exhibition", date: "June 28, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "Engineering",  noOfTickets: 0), Event(title: "Architecture Prototype Exhibition", date: "June 29, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "Architecture", noOfTickets: 0), Event(title: "IT Prototype Exhibition", date: "June 27, 2022", time: "15:00pm - 18:00pm", location: "Building 11", description: "Blah blah blah blah", imageName: "IT", noOfTickets: 0)]
         )
         //}
         
@@ -79,10 +79,32 @@ extension EventViewController: UITableViewDataSource {
         cell.eventNameLabel.text = eventInstance.title;
         cell.eventDateLabel.text = eventInstance.date;
         cell.eventTimeLabel.text = eventInstance.time;
-        cell.eventImageView.image = UIImage(named: "Engineering")
+        cell.eventImageView.image = UIImage(named: eventInstance.imageName)
         
         // Return the cell to TableView
         return cell;
+        
+    }
+}
+
+extension EventViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //grab pressed event
+        let eventInstance = events[indexPath.row]
+        
+        let vc = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        
+        vc.detailTitle = eventInstance.title
+        vc.detailTime = eventInstance.time
+        vc.detailLocation = eventInstance.location
+        vc.detailImageName = eventInstance.imageName
+        vc.detailNumberOfTickets = eventInstance.noOfTickets
+        vc.detailDate = eventInstance.date
+        vc.detailDescription = eventInstance.description
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        vc.navigationItem.setHidesBackButton(false, animated: true)
         
     }
 }

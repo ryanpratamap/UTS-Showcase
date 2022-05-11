@@ -14,8 +14,8 @@ struct Event: Codable {
     var time: String
     var location: String
     var description: String
-    
-    var noOfTickets: Int
+    var imageName: String
+    var noOfTickets: Int   //determine number of tickets user will reserve
 }
 
 //add events details
