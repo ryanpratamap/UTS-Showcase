@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
         
         do {
             try isValidUsername(nameTextField.text!)
+            //need to link studentNoTextField IBlabel to the Main
+            //try isValidStudentNo(studentNoTextField.text!)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
         
@@ -27,9 +29,13 @@ class LoginViewController: UIViewController {
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
             
         } catch invalidNameError.invalidChars {
-            displayAlert("There are no special characters allowed")
+            displayAlert("There are no special characters allowed in your name")
         } catch invalidNameError.invalidLength {
-            displayAlert("Please enter characters between 2-20")
+            displayAlert("Please enter characters between 2-20 for your name")
+        } catch invalidStudentNo.invalidChars {
+            displayAlert("Please enter only numbers for your Student Number")
+        } catch invalidStudentNo.invalidLength {
+            displayAlert("Please enter 8 numbers for your Student Number")
         } catch {
             displayAlert("Unexpected Error")
         }
@@ -38,7 +44,12 @@ class LoginViewController: UIViewController {
     
     enum invalidNameError: Error {
         case invalidChars //only characters please!
-        case invalidLength //between 3-19 pls
+        case invalidLength //between 3-19
+    }
+    
+    enum invalidStudentNo: Error {
+        case invalidChars //only numbers
+        case invalidLength //only 8 characters
     }
 
     func displayAlert(_ errorMsg: String) {
@@ -63,6 +74,15 @@ class LoginViewController: UIViewController {
         }
         guard name.allSatisfy({ !forbiddenChars.contains($0)}) == true else {
             throw invalidNameError.invalidChars
+        }
+    }
+    
+    func isValidStudentNo(_ number: String, _ forbiddenChars: String = "@#$%&*()^<>!±_abcdefghijklmnopqrstuvwxyz", _ length: Int = 8) throws {
+        guard  length ~= number.count else {
+            throw invalidStudentNo.invalidLength
+        }
+        guard number.allSatisfy({ !forbiddenChars.contains($0)}) == true else {
+            throw invalidStudentNo.invalidChars
         }
     }
 
