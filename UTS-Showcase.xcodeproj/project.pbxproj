@@ -14,7 +14,6 @@
 		265749112820205E00637A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265749102820205E00637A7B /* Assets.xcassets */; };
 		265749142820205E00637A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265749122820205E00637A7B /* LaunchScreen.storyboard */; };
 		26740A9528268E0C00D53E67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A9428268E0C00D53E67 /* ProfileViewController.swift */; };
-		26892407282E1F7700B66DA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26892406282E1F7600B66DA7 /* GoogleService-Info.plist */; };
 		26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8212E28214469006EB4A9 /* EventViewController.swift */; };
 		26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B82132282144DD006EB4A9 /* DetailViewController.swift */; };
 		26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8213428214541006EB4A9 /* ReservationViewController.swift */; };
@@ -22,7 +21,6 @@
 		33FE9BDF282DFDDB00377504 /* ReservationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9BDE282DFDDB00377504 /* ReservationTVC.swift */; };
 		33FE9BE1282E0D4100377504 /* UDList .swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9BE0282E0D4100377504 /* UDList .swift */; };
 		4F435969282B8F66006F846F /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F435968282B8F66006F846F /* EventsTVC.swift */; };
-		F8277E3F83A008D80080B6EC /* Pods_UTS_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FC5F61792406E40007AA7D /* Pods_UTS_Showcase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,17 +33,13 @@
 		265749132820205E00637A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265749152820205E00637A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26740A9428268E0C00D53E67 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		26892406282E1F7600B66DA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26B8212E28214469006EB4A9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		327BF4F72824BB8600D8E744 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		3440959835C685ACB68DE826 /* Pods-UTS-Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTS-Showcase.release.xcconfig"; path = "Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase.release.xcconfig"; sourceTree = "<group>"; };
 		33FE9BDE282DFDDB00377504 /* ReservationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTVC.swift; sourceTree = "<group>"; };
 		33FE9BE0282E0D4100377504 /* UDList .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UDList .swift"; sourceTree = "<group>"; };
 		4F435968282B8F66006F846F /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
-		53C0DD0E58C3DD0CA4D9FEC0 /* Pods-UTS-Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTS-Showcase.debug.xcconfig"; path = "Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase.debug.xcconfig"; sourceTree = "<group>"; };
-		80FC5F61792406E40007AA7D /* Pods_UTS_Showcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UTS_Showcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8277E3F83A008D80080B6EC /* Pods_UTS_Showcase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +58,6 @@
 			children = (
 				265749062820205800637A7B /* UTS-Showcase */,
 				265749052820205800637A7B /* Products */,
-				30605E993922C4B55CFA2315 /* Pods */,
-				5F22260BF847AC2AA1C2CC41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,7 +80,6 @@
 				265749102820205E00637A7B /* Assets.xcassets */,
 				265749122820205E00637A7B /* LaunchScreen.storyboard */,
 				265749152820205E00637A7B /* Info.plist */,
-				26892406282E1F7600B66DA7 /* GoogleService-Info.plist */,
 			);
 			path = "UTS-Showcase";
 			sourceTree = "<group>";
@@ -116,15 +106,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		30605E993922C4B55CFA2315 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				53C0DD0E58C3DD0CA4D9FEC0 /* Pods-UTS-Showcase.debug.xcconfig */,
-				3440959835C685ACB68DE826 /* Pods-UTS-Showcase.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		327BF4F42824AFB000D8E744 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,14 +115,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5F22260BF847AC2AA1C2CC41 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				80FC5F61792406E40007AA7D /* Pods_UTS_Showcase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,11 +122,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265749182820205E00637A7B /* Build configuration list for PBXNativeTarget "UTS-Showcase" */;
 			buildPhases = (
-				4FD28ABE592BA13B46ED073D /* [CP] Check Pods Manifest.lock */,
 				265749002820205800637A7B /* Sources */,
 				265749012820205800637A7B /* Frameworks */,
 				265749022820205800637A7B /* Resources */,
-				AB44C33B23FADE47193A0671 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,55 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				265749142820205E00637A7B /* LaunchScreen.storyboard in Resources */,
-				26892407282E1F7700B66DA7 /* GoogleService-Info.plist in Resources */,
 				265749112820205E00637A7B /* Assets.xcassets in Resources */,
 				2657490F2820205800637A7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4FD28ABE592BA13B46ED073D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UTS-Showcase-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB44C33B23FADE47193A0671 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		265749002820205800637A7B /* Sources */ = {
@@ -412,7 +340,6 @@
 		};
 		265749192820205E00637A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53C0DD0E58C3DD0CA4D9FEC0 /* Pods-UTS-Showcase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -441,7 +368,6 @@
 		};
 		2657491A2820205E00637A7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3440959835C685ACB68DE826 /* Pods-UTS-Showcase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
