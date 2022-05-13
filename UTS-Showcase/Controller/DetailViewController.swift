@@ -48,7 +48,15 @@ class DetailViewController: UIViewController {
     
     @IBAction func reserveButtonPressed(_ sender: UIButton) {
         reservationButton.isEnabled = false
-        
+        let currentUDList = UDList()
+        let currentEvents = currentUDList.readEvents()
+        for index in 0..<currentEvents.count {
+            if (currentEvents[index].title == detailTitle) {
+                currentUDList.updateEvent(index: index, reservedStatus: true, numOfTickets: detailNumberOfTickets)
+                print(currentUDList.readEvents())
+                
+            }
+        }
         reservationButton.setTitle("Reserved", for: .normal)
     }
 }

@@ -15,6 +15,7 @@ struct Event: Codable {
     var location: String
     var description: String
     var imageName: String
+    var isReserved: Bool
     var noOfTickets: Int   //determine number of tickets user will reserve
 }
 
