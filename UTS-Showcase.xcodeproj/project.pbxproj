@@ -35,14 +35,14 @@
 		265749132820205E00637A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265749152820205E00637A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26740A9428268E0C00D53E67 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		26892406282E1F7600B66DA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		26892406282E1F7600B66DA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26B8212E28214469006EB4A9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		327BF4F72824BB8600D8E744 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		3440959835C685ACB68DE826 /* Pods-UTS-Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTS-Showcase.release.xcconfig"; path = "Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase.release.xcconfig"; sourceTree = "<group>"; };
 		33FE9BDE282DFDDB00377504 /* ReservationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTVC.swift; sourceTree = "<group>"; };
 		33FE9BE0282E0D4100377504 /* UDList .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UDList .swift"; sourceTree = "<group>"; };
+		3440959835C685ACB68DE826 /* Pods-UTS-Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTS-Showcase.release.xcconfig"; path = "Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase.release.xcconfig"; sourceTree = "<group>"; };
 		4F435968282B8F66006F846F /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
 		53C0DD0E58C3DD0CA4D9FEC0 /* Pods-UTS-Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTS-Showcase.debug.xcconfig"; path = "Target Support Files/Pods-UTS-Showcase/Pods-UTS-Showcase.debug.xcconfig"; sourceTree = "<group>"; };
 		80FC5F61792406E40007AA7D /* Pods_UTS_Showcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UTS_Showcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
