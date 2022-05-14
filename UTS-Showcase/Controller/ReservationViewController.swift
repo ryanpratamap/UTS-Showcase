@@ -38,6 +38,7 @@ class ReservationViewController: UIViewController {
                 print("appended reserved event to list")
             }
         }
+        ReservationTable.reloadData()
     }
         
 }
