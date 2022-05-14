@@ -62,6 +62,12 @@ extension EventViewController: UITableViewDelegate {
         //Update the event list by reading from user defaults again
         let udEventList = UDList()
         events = udEventList.readEvents()
+        var index = 1
+        for e in events {
+            print("Event \(index) reservation status: \(e.isReserved)")
+            index += 1
+        }
+        
         //Obtain pressed event
         let eventInstance = events[indexPath.row]
         
