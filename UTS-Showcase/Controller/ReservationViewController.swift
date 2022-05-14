@@ -16,24 +16,28 @@ class ReservationViewController: UIViewController {
     @IBOutlet weak var WelcomeLabel: UILabel!
     
     var reservationsList: [Event] = []
-    
+    //Function only executes once, to setup the view unless called by a segue
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        // Set custom cell row height
+        ReservationTable.rowHeight = 100
+
+    }
+    //Function executes every time the user goes to the reservations page
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let udEventList = UDList()
         let currentUDList = udEventList.readEvents()
         //print("read events")
         
         for i in 0..<currentUDList.count {
-            if (currentUDList[i].isReserved == true) {
+            //Add to reservations page only if event is reserved, and it does not already exist in the reservations list
+            if (currentUDList[i].isReserved == true && !reservationsList.contains(where: {$0.title == currentUDList[i].title})) {
                 reservationsList.append(currentUDList[i])
                 print("appended reserved event to list")
             }
         }
-        
-        ReservationTable.rowHeight = 100
-        //print(reservationsList)
     }
         
 }

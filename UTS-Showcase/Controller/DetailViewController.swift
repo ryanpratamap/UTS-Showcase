@@ -58,10 +58,6 @@ class DetailViewController: UIViewController {
         for index in 0..<currentEvents.count {
             if (currentEvents[index].title == detailTitle) {
                 currentUDList.updateEvent(index: index, reservedStatus: true, numOfTickets: detailNumberOfTickets)
-                //print("Changed reservation status in UD to: ")
-                //print(currentUDList.readEvents()[2].isReserved)
-                //print(currentUDList.readEvents())
-                
             }
         }
         reservationButton.setTitle("Reserved", for: .normal)

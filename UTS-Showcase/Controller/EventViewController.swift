@@ -14,19 +14,16 @@ class EventViewController: UIViewController {
     
     @IBOutlet weak var eventTableView: UITableView!
     @IBOutlet weak var welcomeLabel: UILabel!
-    //var name:String?
+    
     var events: [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //welcomeLabel.text = "Welcome, \(name!)!"
+        
         let udEventList = UDList()
         eventTableView.rowHeight = 225
         events = udEventList.readEvents()
-        for e in events {
-            print("Event reservation status: \(e.isReserved)")
-        }
     }
 
 }
@@ -62,11 +59,6 @@ extension EventViewController: UITableViewDelegate {
         //Update the event list by reading from user defaults again
         let udEventList = UDList()
         events = udEventList.readEvents()
-        var index = 1
-        for e in events {
-            print("Event \(index) reservation status: \(e.isReserved)")
-            index += 1
-        }
         
         //Obtain pressed event
         let eventInstance = events[indexPath.row]
@@ -81,7 +73,6 @@ extension EventViewController: UITableViewDelegate {
         vc.detailDate = eventInstance.date
         vc.detailDescription = eventInstance.description
         vc.detailIsReserved = eventInstance.isReserved
-        print("Current reservation status in UD: \(eventInstance.isReserved)")
         
         self.navigationController?.pushViewController(vc, animated: true)
         vc.navigationItem.setHidesBackButton(false, animated: true)
