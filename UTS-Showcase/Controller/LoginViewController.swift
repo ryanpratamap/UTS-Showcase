@@ -27,6 +27,9 @@ class LoginViewController: UIViewController {
             try isValidUsername(nameTextField.text!)
             //need to link studentNoTextField IBlabel to the Main
             try isValidStudentNo(studentNoTextField.text!)
+            currentAccount.name = nameTextField.text!
+            currentAccount.id = studentNoTextField.text!
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
         

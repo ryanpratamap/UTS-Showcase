@@ -18,6 +18,7 @@
 		26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B82132282144DD006EB4A9 /* DetailViewController.swift */; };
 		26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8213428214541006EB4A9 /* ReservationViewController.swift */; };
 		327BF4F82824BB8600D8E744 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BF4F72824BB8600D8E744 /* Event.swift */; };
+		32D341F6282FCB4C0088CC4D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D341F5282FCB4C0088CC4D /* Account.swift */; };
 		33FE9BDF282DFDDB00377504 /* ReservationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9BDE282DFDDB00377504 /* ReservationTVC.swift */; };
 		33FE9BE1282E0D4100377504 /* UDList .swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE9BE0282E0D4100377504 /* UDList .swift */; };
 		4F435969282B8F66006F846F /* EventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F435968282B8F66006F846F /* EventsTVC.swift */; };
@@ -37,6 +38,7 @@
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		327BF4F72824BB8600D8E744 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		32D341F5282FCB4C0088CC4D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		33FE9BDE282DFDDB00377504 /* ReservationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTVC.swift; sourceTree = "<group>"; };
 		33FE9BE0282E0D4100377504 /* UDList .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UDList .swift"; sourceTree = "<group>"; };
 		4F435968282B8F66006F846F /* EventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTVC.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				327BF4F72824BB8600D8E744 /* Event.swift */,
 				33FE9BE0282E0D4100377504 /* UDList .swift */,
+				32D341F5282FCB4C0088CC4D /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */,
 				26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */,
 				265749082820205800637A7B /* AppDelegate.swift in Sources */,
+				32D341F6282FCB4C0088CC4D /* Account.swift in Sources */,
 				2657490A2820205800637A7B /* SceneDelegate.swift in Sources */,
 				327BF4F82824BB8600D8E744 /* Event.swift in Sources */,
 				26740A9528268E0C00D53E67 /* ProfileViewController.swift in Sources */,
