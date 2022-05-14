@@ -32,7 +32,7 @@ class ReservationViewController: UIViewController {
             }
         }
         
-        ReservationTable.rowHeight = 200
+        ReservationTable.rowHeight = 100
         //print(reservationsList)
     }
         
