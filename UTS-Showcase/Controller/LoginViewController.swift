@@ -17,6 +17,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
+        //Write data only at login
+        //This acts as a "Reset" of event data
+        let udCurrentList = UDList()
+        udCurrentList.writeEvents()
         
         do {
             try isValidUsername(nameTextField.text!)

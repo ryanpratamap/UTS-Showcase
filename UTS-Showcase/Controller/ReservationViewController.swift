@@ -23,17 +23,17 @@ class ReservationViewController: UIViewController {
         
         let udEventList = UDList()
         let currentUDList = udEventList.readEvents()
-        print("read events")
+        //print("read events")
         
         for i in 0..<currentUDList.count {
             if (currentUDList[i].isReserved == true) {
                 reservationsList.append(currentUDList[i])
-                print("appended to list")
+                print("appended reserved event to list")
             }
         }
         
         ReservationTable.rowHeight = 200
-        print(reservationsList)
+        //print(reservationsList)
     }
         
 }

@@ -22,9 +22,11 @@ class EventViewController: UIViewController {
         // Do any additional setup after loading the view.
         //welcomeLabel.text = "Welcome, \(name!)!"
         let udEventList = UDList()
-        udEventList.writeEvents()
         eventTableView.rowHeight = 225
         events = udEventList.readEvents()
+        for e in events {
+            print("Event reservation status: \(e.isReserved)")
+        }
     }
 
 }
@@ -57,7 +59,10 @@ extension EventViewController: UITableViewDataSource {
 extension EventViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //grab pressed event
+        //Update the event list by reading from user defaults again
+        let udEventList = UDList()
+        events = udEventList.readEvents()
+        //Obtain pressed event
         let eventInstance = events[indexPath.row]
         
         let vc = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
@@ -69,6 +74,8 @@ extension EventViewController: UITableViewDelegate {
         vc.detailNumberOfTickets = eventInstance.noOfTickets
         vc.detailDate = eventInstance.date
         vc.detailDescription = eventInstance.description
+        vc.detailIsReserved = eventInstance.isReserved
+        print("Current reservation status in UD: \(eventInstance.isReserved)")
         
         self.navigationController?.pushViewController(vc, animated: true)
         vc.navigationItem.setHidesBackButton(false, animated: true)

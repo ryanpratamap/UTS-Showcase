@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
     var detailLocation: String?
     var detailDescription: String?
     var detailImageName: String?
+    var detailIsReserved: Bool?
     var detailNumberOfTickets = 1
     
     override func viewDidLoad() {
@@ -37,6 +38,10 @@ class DetailViewController: UIViewController {
         eventDetailDescription.text = detailDescription
         eventDetailImageView.image = UIImage(named: detailImageName!)
         numberOfTicketsLabel.text = "Number of Tickets: " + String(detailNumberOfTickets)
+        //If the event has been reserved, the reserve button should be disabled even if the user goes back to the event page
+        if (detailIsReserved == true) {
+            reservationButton.isEnabled = false
+        }
     }
     
     @IBAction func ticketQtyStepper(_ sender: UIStepper) {
@@ -53,7 +58,9 @@ class DetailViewController: UIViewController {
         for index in 0..<currentEvents.count {
             if (currentEvents[index].title == detailTitle) {
                 currentUDList.updateEvent(index: index, reservedStatus: true, numOfTickets: detailNumberOfTickets)
-                print(currentUDList.readEvents())
+                //print("Changed reservation status in UD to: ")
+                //print(currentUDList.readEvents()[2].isReserved)
+                //print(currentUDList.readEvents())
                 
             }
         }
