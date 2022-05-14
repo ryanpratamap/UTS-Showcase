@@ -35,9 +35,10 @@ class ReservationViewController: UIViewController {
             //Add to reservations page only if event is reserved, and it does not already exist in the reservations list
             if (currentUDList[i].isReserved == true && !reservationsList.contains(where: {$0.title == currentUDList[i].title})) {
                 reservationsList.append(currentUDList[i])
-                print("appended reserved event to list")
+                //print("appended reserved event to list")
             }
         }
+        //Update reservation table view contents
         ReservationTable.reloadData()
     }
         
