@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var studentNoTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ class LoginViewController: UIViewController {
         do {
             try isValidUsername(nameTextField.text!)
             //need to link studentNoTextField IBlabel to the Main
-            //try isValidStudentNo(studentNoTextField.text!)
+            try isValidStudentNo(studentNoTextField.text!)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
         
