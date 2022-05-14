@@ -22,6 +22,7 @@ class ReservationViewController: UIViewController {
         // Do any additional setup after loading the view.
         // Set custom cell row height
         ReservationTable.rowHeight = 100
+        WelcomeLabel.text = "Hi \(currentAccount.name)!"
 
     }
     //Function executes every time the user goes to the reservations page
