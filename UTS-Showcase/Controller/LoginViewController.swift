@@ -11,10 +11,23 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var studentNoTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
+    //bool to check if user is not a student
+    var notAStudent = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func studentNoSwitch(_ sender: UISwitch) {
+        if sender.isOn { //on tapping switch
+            studentNoTextField.isEnabled = false
+            notAStudent = true
+            
+        } else {
+            studentNoTextField.isEnabled = true
+            notAStudent = false
+        }
     }
     
     @IBAction func login(_ sender: UIButton) {
@@ -25,10 +38,12 @@ class LoginViewController: UIViewController {
         
         do {
             try isValidUsername(nameTextField.text!)
-            //need to link studentNoTextField IBlabel to the Main
-            try isValidStudentNo(studentNoTextField.text!)
+            
+            if (notAStudent == false) {
+                try isValidStudentNo(studentNoTextField.text!)
+                currentAccount.id = studentNoTextField.text!
+            }
             currentAccount.name = nameTextField.text!
-            currentAccount.id = studentNoTextField.text!
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
