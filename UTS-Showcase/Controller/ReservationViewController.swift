@@ -21,7 +21,7 @@ class ReservationViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // Set custom cell row height
-        ReservationTable.rowHeight = 100
+        ReservationTable.rowHeight = 120
         WelcomeLabel.text = "Hi \(currentAccount.name)!"
 
     }
@@ -59,11 +59,12 @@ extension ReservationViewController: UITableViewDataSource {
         // Updated the UI for this Cell
         let eventInstance = reservationsList[indexPath.row]
         
-        cell.EventName.text = eventInstance.title;
-        cell.EventTime.text = eventInstance.time;
+        cell.EventName.text = eventInstance.title
+        cell.EventTime.text = eventInstance.time
         cell.EventImgView.image = UIImage(named: eventInstance.imageName)
-        cell.NumberofTickets.text = String(eventInstance.noOfTickets)
-        
+        cell.NumberofTickets.text = "Tickets: " + String(eventInstance.noOfTickets)
+        cell.EventDate.text = eventInstance.date
+        cell.EventLocation.text = eventInstance.location
         // Return the cell to TableView
         return cell;
         

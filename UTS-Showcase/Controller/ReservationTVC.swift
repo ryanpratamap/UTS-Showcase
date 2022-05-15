@@ -9,6 +9,8 @@ import UIKit
 
 class ReservationTVC: UITableViewCell {
     @IBOutlet weak var EventName: UILabel!
+    @IBOutlet weak var EventDate: UILabel!
+    @IBOutlet weak var EventLocation: UILabel!
     @IBOutlet weak var EventImgView: UIImageView!
     @IBOutlet weak var NumberofTickets: UILabel!
     @IBOutlet weak var EventCancelButton: UIButton!

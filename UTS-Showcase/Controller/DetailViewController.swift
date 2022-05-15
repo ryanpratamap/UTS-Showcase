@@ -41,6 +41,7 @@ class DetailViewController: UIViewController {
         //If the event has been reserved, the reserve button should be disabled even if the user goes back to the event page
         if (detailIsReserved == true) {
             reservationButton.isEnabled = false
+            reservationButton.setTitle("Reserved", for: .normal)
         }
     }
     
