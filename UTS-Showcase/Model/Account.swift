@@ -15,3 +15,5 @@ struct Account: Codable {
 }
 
 var currentAccount = Account(id: "12345678" , name: "placeholder")
+//bool to check if user is not a student
+var notAStudent = false

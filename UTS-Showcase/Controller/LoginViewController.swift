@@ -11,8 +11,6 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var studentNoTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    //bool to check if user is not a student
-    var notAStudent = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
