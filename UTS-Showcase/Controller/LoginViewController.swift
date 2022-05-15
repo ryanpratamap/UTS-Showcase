@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
                 try isValidStudentNo(studentNoTextField.text!)
                 currentAccount.id = studentNoTextField.text!
             }
-            currentAccount.name = nameTextField.text!
+            currentAccount.name = nameTextField.text!.capitalizingFirstLetter()
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
@@ -114,4 +114,14 @@ class LoginViewController: UIViewController {
             VC.name = nameTextField.text!
         }*/
     //}
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
 }
