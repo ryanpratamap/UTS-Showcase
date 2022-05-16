@@ -20,11 +20,11 @@ class LoginViewController: UIViewController {
     @IBAction func studentNoSwitch(_ sender: UISwitch) {
         if sender.isOn { //on tapping switch
             studentNoTextField.isEnabled = false
-            notAStudent = true
+            currentAccount.notAStudent = true
             
         } else {
             studentNoTextField.isEnabled = true
-            notAStudent = false
+            currentAccount.notAStudent = false
         }
     }
     
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         do {
             try isValidUsername(nameTextField.text!)
             
-            if (notAStudent == false) {
+            if (currentAccount.notAStudent == false) {
                 try isValidStudentNo(studentNoTextField.text!)
                 currentAccount.id = studentNoTextField.text!
             }

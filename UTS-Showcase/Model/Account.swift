@@ -12,8 +12,8 @@ struct Account: Codable {
     var id: String
     var name: String
     //potentially password here as well
+    var notAStudent: Bool
 }
 
-var currentAccount = Account(id: "12345678" , name: "placeholder")
-//bool to check if user is not a student
-var notAStudent = false
+var currentAccount = Account(id: "12345678" , name: "placeholder", notAStudent: false)
+

@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         // Hide the StudentID label if the user is not a student
-        if (notAStudent) {
+        if (currentAccount.notAStudent) {
             studentIDLabel.isHidden = true
         } else {
             studentIDLabel.isHidden = false
@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func logout(_ sender: UIButton) {
         // Reset notAStudent variable
-        notAStudent = false
+        currentAccount.notAStudent = false
         
         // Redirect to Login Page
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
