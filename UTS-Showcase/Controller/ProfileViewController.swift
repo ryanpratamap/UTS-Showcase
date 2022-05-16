@@ -11,28 +11,30 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var studentNoLabel: UILabel!
+    @IBOutlet weak var studentIDLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        nameLabel.text = currentAccount.name
-        //hides the label if notAStudent is true
-        if (notAStudent == false) {
-            studentNoLabel.isHidden = false
-            studentNoLabel.text = "Student Number: \(currentAccount.id)"
+        
+        // Hide the StudentID label if the user is not a student
+        if (notAStudent) {
+            studentIDLabel.isHidden = true
         } else {
-            studentNoLabel.isHidden = true
+            studentIDLabel.isHidden = false
+            studentIDLabel.text = "Student ID: \(currentAccount.id)"
         }
+        
+        // Set name label
+        nameLabel.text = "Name: \(currentAccount.name)"
     }
     
     @IBAction func logout(_ sender: UIButton) {
-        //reset notAStudent bool
+        // Reset notAStudent variable
         notAStudent = false
+        
+        // Redirect to Login Page
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginNavigationController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController")
-        
-        // To get SceneDelegate object and call the function to change to login page
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavigationController)
     }
     

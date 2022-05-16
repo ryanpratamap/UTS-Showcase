@@ -96,9 +96,9 @@
 				26B82132282144DD006EB4A9 /* DetailViewController.swift */,
 				26B8213428214541006EB4A9 /* ReservationViewController.swift */,
 				26740A9428268E0C00D53E67 /* ProfileViewController.swift */,
+				269559062831E6710099B182 /* QRCodeViewController.swift */,
 				4F435968282B8F66006F846F /* EventsTVC.swift */,
 				33FE9BDE282DFDDB00377504 /* ReservationTVC.swift */,
-				269559062831E6710099B182 /* QRCodeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
