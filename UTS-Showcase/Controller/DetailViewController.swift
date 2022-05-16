@@ -62,5 +62,8 @@ class DetailViewController: UIViewController {
             }
         }
         reservationButton.setTitle("Reserved", for: .normal)
+        //add to local account
+        currentAccount.updateAccountData(eventName: detailTitle!, reserveStatus: detailIsReserved!, noOfTickets: detailNumberOfTickets)
+        print(currentAccount)
     }
 }
