@@ -8,16 +8,18 @@
 import UIKit
 
 class ReservationTVC: UITableViewCell {
-    @IBOutlet weak var EventName: UILabel!
-    @IBOutlet weak var EventDate: UILabel!
-    @IBOutlet weak var EventLocation: UILabel!
-    @IBOutlet weak var EventImgView: UIImageView!
-    @IBOutlet weak var NumberofTickets: UILabel!
-    @IBOutlet weak var EventCancelButton: UIButton!
-    @IBOutlet weak var EventTime: UILabel!
+    
+    @IBOutlet weak var reservedEventImageView: UIImageView!
+    @IBOutlet weak var reservedEventNameLabel: UILabel!
+    @IBOutlet weak var reservedEventDateLabel: UILabel!
+    @IBOutlet weak var reservedEventTimeLabel: UILabel!
+    @IBOutlet weak var reservedEventLocationLabel: UILabel!
+    @IBOutlet weak var reservedTicketsLabel: UILabel!
+    @IBOutlet weak var viewQRButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         
         // Initialization code
     }

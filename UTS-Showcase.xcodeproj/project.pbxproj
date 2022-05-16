@@ -14,6 +14,7 @@
 		265749112820205E00637A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265749102820205E00637A7B /* Assets.xcassets */; };
 		265749142820205E00637A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265749122820205E00637A7B /* LaunchScreen.storyboard */; };
 		26740A9528268E0C00D53E67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A9428268E0C00D53E67 /* ProfileViewController.swift */; };
+		269559072831E6710099B182 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269559062831E6710099B182 /* QRCodeViewController.swift */; };
 		26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8212E28214469006EB4A9 /* EventViewController.swift */; };
 		26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B82132282144DD006EB4A9 /* DetailViewController.swift */; };
 		26B8213528214541006EB4A9 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8213428214541006EB4A9 /* ReservationViewController.swift */; };
@@ -34,6 +35,7 @@
 		265749132820205E00637A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265749152820205E00637A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26740A9428268E0C00D53E67 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		269559062831E6710099B182 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		26B8212E28214469006EB4A9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		26B82132282144DD006EB4A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26B8213428214541006EB4A9 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				26740A9428268E0C00D53E67 /* ProfileViewController.swift */,
 				4F435968282B8F66006F846F /* EventsTVC.swift */,
 				33FE9BDE282DFDDB00377504 /* ReservationTVC.swift */,
+				269559062831E6710099B182 /* QRCodeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				2657490C2820205800637A7B /* LoginViewController.swift in Sources */,
 				4F435969282B8F66006F846F /* EventsTVC.swift in Sources */,
+				269559072831E6710099B182 /* QRCodeViewController.swift in Sources */,
 				26B82133282144DD006EB4A9 /* DetailViewController.swift in Sources */,
 				26B8212F28214469006EB4A9 /* EventViewController.swift in Sources */,
 				265749082820205800637A7B /* AppDelegate.swift in Sources */,

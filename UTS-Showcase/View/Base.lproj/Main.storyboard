@@ -190,6 +190,37 @@
             </objects>
             <point key="canvasLocation" x="1953.6231884057972" y="1526.7857142857142"/>
         </scene>
+        <!--Code View Controller-->
+        <scene sceneID="eqs-sb-eB9">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeViewController" id="w7y-dr-HdS" customClass="QRCodeViewController" customModule="UTS_Showcase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKq-xq-0Fk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Here!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLD-u9-ZWb">
+                                <rect key="frame" x="0.0" y="316" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-ec-pqd">
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tlt-d6-jSe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrImage" destination="8bZ-ec-pqd" id="d65-nE-RPs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pl-ju-GQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2969.5652173913045" y="2258.0357142857142"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="sMr-zj-DzR">
             <objects>
@@ -272,7 +303,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Crg-0A-qkH" kind="relationship" relationship="viewControllers" id="clJ-B2-HqD"/>
-                        <segue destination="4ON-QT-qaa" kind="relationship" relationship="viewControllers" id="G2e-tc-oYj"/>
+                        <segue destination="cLA-8H-ATU" kind="relationship" relationship="viewControllers" id="Ydz-n1-bTI"/>
                         <segue destination="AVI-Ut-4cd" kind="relationship" relationship="viewControllers" id="XCO-xz-rym"/>
                     </connections>
                 </tabBarController>
@@ -280,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="2970" y="68"/>
         </scene>
-        <!--My Reservation-->
+        <!--Reservation View Controller-->
         <scene sceneID="6PX-3d-NtM">
             <objects>
-                <viewController storyboardIdentifier="ReservationViewController" title="My Reservation" id="4ON-QT-qaa" customClass="ReservationViewController" customModule="UTS_Showcase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReservationViewController" id="4ON-QT-qaa" customClass="ReservationViewController" customModule="UTS_Showcase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gzz-1Q-PyF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,12 +349,6 @@
                                                     <rect key="frame" x="20" y="9" width="123" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kao-Et-Toy">
-                                                    <rect key="frame" x="313" y="45" width="81" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOP-fV-ruU">
                                                     <rect key="frame" x="151" y="9" width="165" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -352,16 +377,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kao-Et-Toy">
+                                                    <rect key="frame" x="313" y="63" width="81" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDD-qe-nJe">
+                                                    <rect key="frame" x="306" y="30" width="95" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="View QR"/>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="EventCancelButton" destination="Kao-Et-Toy" id="sNH-JM-URH"/>
-                                            <outlet property="EventDate" destination="o9g-cw-7Dv" id="1pk-to-T9i"/>
-                                            <outlet property="EventImgView" destination="Hnd-uv-MW0" id="wfr-m3-axi"/>
-                                            <outlet property="EventLocation" destination="eKW-UM-rIh" id="Y7w-UR-dmN"/>
-                                            <outlet property="EventName" destination="sOP-fV-ruU" id="40U-1V-hA9"/>
-                                            <outlet property="EventTime" destination="ypm-IU-utF" id="msR-K3-Cn1"/>
-                                            <outlet property="NumberofTickets" destination="ZZb-jR-EqX" id="egR-Cd-pBC"/>
+                                            <outlet property="cancelButton" destination="Kao-Et-Toy" id="sNH-JM-URH"/>
+                                            <outlet property="reservedEventDateLabel" destination="o9g-cw-7Dv" id="1pk-to-T9i"/>
+                                            <outlet property="reservedEventImageView" destination="Hnd-uv-MW0" id="wfr-m3-axi"/>
+                                            <outlet property="reservedEventLocationLabel" destination="eKW-UM-rIh" id="Y7w-UR-dmN"/>
+                                            <outlet property="reservedEventNameLabel" destination="sOP-fV-ruU" id="40U-1V-hA9"/>
+                                            <outlet property="reservedEventTimeLabel" destination="ypm-IU-utF" id="msR-K3-Cn1"/>
+                                            <outlet property="reservedTicketsLabel" destination="ZZb-jR-EqX" id="egR-Cd-pBC"/>
+                                            <outlet property="viewQRButton" destination="jDD-qe-nJe" id="kdJ-DT-0WZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -381,7 +419,7 @@
                         <viewLayoutGuide key="safeArea" id="0pg-cw-v2g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Reservation" image="bookmark" catalog="system" id="Zgz-Kr-3vx"/>
+                    <navigationItem key="navigationItem" id="dkm-Eb-wnj"/>
                     <connections>
                         <outlet property="ReservationTable" destination="Wf3-0b-d5E" id="YlL-rx-587"/>
                         <outlet property="WelcomeLabel" destination="fp0-Kw-Z4J" id="BLo-b5-v4D"/>
@@ -390,7 +428,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iso-A9-TLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2969.5652173913045" y="796.875"/>
+            <point key="canvasLocation" x="2969.5652173913045" y="1526.7857142857142"/>
+        </scene>
+        <!--My Reservation-->
+        <scene sceneID="eMU-VX-ceo">
+            <objects>
+                <navigationController storyboardIdentifier="ReservationNavigationController" id="cLA-8H-ATU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Reservation" image="bookmark" catalog="system" id="v6f-WP-p6Y"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vz1-k7-uks">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4ON-QT-qaa" kind="relationship" relationship="rootViewController" id="rfz-oO-cCv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGz-2l-FYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2970" y="797"/>
         </scene>
         <!--Event Detail-->
         <scene sceneID="QaB-tu-2Tm">
@@ -476,7 +531,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upr-Is-7LV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2969.5652173913045" y="1526.7857142857142"/>
+            <point key="canvasLocation" x="1954" y="2259"/>
         </scene>
     </scenes>
     <resources>

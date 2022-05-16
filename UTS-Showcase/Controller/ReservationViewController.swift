@@ -58,15 +58,25 @@ extension ReservationViewController: UITableViewDataSource {
         
         // Updated the UI for this Cell
         let eventInstance = reservationsList[indexPath.row]
+        cell.reservedEventImageView.image = UIImage(named: eventInstance.imageName)
+        cell.reservedEventNameLabel.text = eventInstance.title
+        cell.reservedEventDateLabel.text = eventInstance.date
+        cell.reservedEventTimeLabel.text = eventInstance.time
+        cell.reservedEventLocationLabel.text = eventInstance.location
+        cell.reservedTicketsLabel.text = "Tickets: " + String(eventInstance.noOfTickets)
+        cell.viewQRButton.addTarget(self, action: #selector(goToQRPage), for: .touchUpInside)
+        cell.cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
         
-        cell.EventName.text = eventInstance.title
-        cell.EventTime.text = eventInstance.time
-        cell.EventImgView.image = UIImage(named: eventInstance.imageName)
-        cell.NumberofTickets.text = "Tickets: " + String(eventInstance.noOfTickets)
-        cell.EventDate.text = eventInstance.date
-        cell.EventLocation.text = eventInstance.location
         // Return the cell to TableView
         return cell;
-        
+    }
+    
+    @objc func goToQRPage() {
+        let vc = storyboard?.instantiateViewController(identifier: "QRCodeViewController") as! QRCodeViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func cancelEvent() {
+        print("Cancelled")
     }
 }
