@@ -84,8 +84,8 @@ extension ReservationViewController: UITableViewDataSource {
     @objc func cancelEvent(_ sender: UIButton) {
         let reservedEvent: [Int:Event] = sender.layer.value(forKey: "EventData") as! [Int:Event]
         
-        //udEventList.updateEvent(title: , reservedStatus: false, numOfTickets: 1)
-        //reservationsList.remove(at: )
+        udEventList.updateEvent(title: Array(reservedEvent.values)[0].title, reservedStatus: false, numOfTickets: 1)
+        reservationsList.remove(at: Array(reservedEvent.keys)[0])
         ReservationTable.reloadData()
     }
 }
