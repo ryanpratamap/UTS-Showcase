@@ -15,7 +15,9 @@ class ReservationViewController: UIViewController {
     @IBOutlet weak var ReservationTable: UITableView!
     @IBOutlet weak var WelcomeLabel: UILabel!
     
+    let udEventList = UDList()
     var reservationsList: [Event] = []
+    
     //Function only executes once, to setup the view unless called by a segue
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class ReservationViewController: UIViewController {
     //Function executes every time the user goes to the reservations page
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let udEventList = UDList()
+        
         let currentUDList = udEventList.readEvents()
         //print("read events")
         
@@ -65,6 +67,9 @@ extension ReservationViewController: UITableViewDataSource {
         cell.reservedEventLocationLabel.text = eventInstance.location
         cell.reservedTicketsLabel.text = "Tickets: " + String(eventInstance.noOfTickets)
         cell.viewQRButton.addTarget(self, action: #selector(goToQRPage), for: .touchUpInside)
+        
+        let reservedEvent: [Int:Event] = [indexPath.row : eventInstance]
+        cell.cancelButton.layer.setValue(reservedEvent, forKey: "EventData")
         cell.cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
         
         // Return the cell to TableView
@@ -76,7 +81,11 @@ extension ReservationViewController: UITableViewDataSource {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc func cancelEvent() {
-        print("Cancelled")
+    @objc func cancelEvent(_ sender: UIButton) {
+        let reservedEvent: [Int:Event] = sender.layer.value(forKey: "EventData") as! [Int:Event]
+        
+        //udEventList.updateEvent(title: , reservedStatus: false, numOfTickets: 1)
+        //reservationsList.remove(at: )
+        ReservationTable.reloadData()
     }
 }

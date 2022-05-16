@@ -31,9 +31,22 @@ struct UDList {
         defaults.set(try? PropertyListEncoder().encode(updatedEvents), forKey: EVENTS_LIST_KEY)
     }
     
+    func updateEvent(title: String, reservedStatus: Bool, numOfTickets: Int) {
+        let defaults = UserDefaults.standard
+        
+        var updatedEvents = readEvents()
+        for i in 0..<updatedEvents.count {
+            if (updatedEvents[i].title == title) {
+                updatedEvents[i].isReserved = reservedStatus
+                updatedEvents[i].noOfTickets = numOfTickets
+            }
+        }
+        
+        defaults.set(try? PropertyListEncoder().encode(updatedEvents), forKey: EVENTS_LIST_KEY)
+    }
+    
     func readEvents() -> [Event] {
             // Read from User Defaults
-            // This should happen at the HighScrollViewController
             
             let defaults = UserDefaults.standard;
             
