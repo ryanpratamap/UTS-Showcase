@@ -14,7 +14,7 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController {
-    //Connections
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var studentIDLabel: UILabel!
     
