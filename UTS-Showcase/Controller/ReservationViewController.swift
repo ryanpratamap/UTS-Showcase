@@ -15,14 +15,14 @@ import UIKit
 
 
 class ReservationViewController: UIViewController {
-
+    //Connections
     @IBOutlet weak var YourReservationsLabel: UILabel!
     @IBOutlet weak var ReservationTable: UITableView!
     @IBOutlet weak var WelcomeLabel: UILabel!
-    
+    //List of reserved events
     var reservationsList: [Event] = []
     
-    //Function only executes once, to setup the view unless called by a segue
+    //viewDidLoad only executes once, to setup the view object unless called by a segue
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,18 +31,16 @@ class ReservationViewController: UIViewController {
         WelcomeLabel.text = "Hi \(currentAccount.name)!"
 
     }
-    //Function executes every time the user goes to the reservations page
+    //viewWillAppear executes every time the user goes to the reservations page
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        //read from user defaults
         let currentUDList = UDList.shared.readEvents()
-        //print("read events")
         
         for i in 0..<currentUDList.count {
             //Add to reservations page only if event is reserved, and it does not already exist in the reservations list
             if (currentUDList[i].isReserved == true && !reservationsList.contains(where: {$0.title == currentUDList[i].title})) {
                 reservationsList.append(currentUDList[i])
-                //print("appended reserved event to list")
             }
         }
         //Update reservation table view contents
@@ -50,10 +48,11 @@ class ReservationViewController: UIViewController {
     }
         
 }
-
+//Table data source
 extension ReservationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //display reservations list contents
         return reservationsList.count;
     }
     

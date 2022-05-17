@@ -12,29 +12,31 @@
 
 import Foundation
 import UIKit
-
+//Event list key
 let EVENTS_LIST_KEY = "events"
 
 class EventViewController: UIViewController {
-    
+    //Connections
     @IBOutlet weak var eventTableView: UITableView!
     @IBOutlet weak var welcomeLabel: UILabel!
-    
+    //Event list
     var events: [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        //Custon cell height
         eventTableView.rowHeight = 225
+        //read from user defaults
         events = UDList.shared.readEvents()
     }
 
 }
-
+//Table data source
 extension EventViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Display number of events in array
         return events.count;
     }
     
@@ -65,9 +67,9 @@ extension EventViewController: UITableViewDelegate {
         
         //Obtain pressed event
         let eventInstance = events[indexPath.row]
-        
+        //Instantiate DetailViewController
         let vc = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        
+        //Pass all relevant information
         vc.detailTitle = eventInstance.title
         vc.detailTime = eventInstance.time
         vc.detailLocation = eventInstance.location
@@ -76,7 +78,7 @@ extension EventViewController: UITableViewDelegate {
         vc.detailDate = eventInstance.date
         vc.detailDescription = eventInstance.description
         vc.detailIsReserved = eventInstance.isReserved
-        
+        //Transition to DetailViewController
         self.navigationController?.pushViewController(vc, animated: true)
         vc.navigationItem.setHidesBackButton(false, animated: true)
         
