@@ -93,7 +93,7 @@ class LoginViewController: UIViewController {
             self.present(dialogMessage, animated: true, completion: nil)
         }
 
-    func isValidUsername(_ name: String, _ forbiddenChars: String = "@#$%&*()^<>!±_1234567890", _ lengthRange: Range<Int> = 2..<20) throws {
+    func isValidUsername(_ name: String, _ forbiddenChars: String = "@#$%&*()^<>!±_,.1234567890", _ lengthRange: Range<Int> = 2..<20) throws {
         guard  lengthRange ~= name.count else {
             throw invalidNameError.invalidLength
         }
