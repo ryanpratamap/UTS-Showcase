@@ -20,7 +20,7 @@ struct Account: Codable {
         print("outside")
         if (!currentData.contains(where: {$0.eventName == eventName})) {
             currentData.append(userData(eventName: eventName, reserveStatus: reserveStatus, noOfTickets: noOfTickets))
-            print("appended, 2")
+            print("appended, 27")
             
         } else {
             for index in 0..<currentData.count {
