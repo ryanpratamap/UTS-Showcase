@@ -87,5 +87,8 @@ extension ReservationViewController: UITableViewDataSource {
         udEventList.updateEvent(title: Array(reservedEvent.values)[0].title, reservedStatus: false, numOfTickets: 1)
         reservationsList.remove(at: Array(reservedEvent.keys)[0])
         ReservationTable.reloadData()
+        
+        currentAccount.updateAccountData(eventName: Array(reservedEvent.values)[0].title, reserveStatus: false, noOfTickets: 1)
+        print(currentAccount)
     }
 }

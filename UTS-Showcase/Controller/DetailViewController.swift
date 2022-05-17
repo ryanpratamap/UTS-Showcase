@@ -60,10 +60,11 @@ class DetailViewController: UIViewController {
             if (currentEvents[index].title == detailTitle) {
                 currentUDList.updateEvent(index: index, reservedStatus: true, numOfTickets: detailNumberOfTickets)
             }
+            
         }
         reservationButton.setTitle("Reserved", for: .normal)
         //add to local account
-        currentAccount.updateAccountData(eventName: detailTitle!, reserveStatus: detailIsReserved!, noOfTickets: detailNumberOfTickets)
+        currentAccount.updateAccountData(eventName: detailTitle!, reserveStatus: true, noOfTickets: detailNumberOfTickets)
         print(currentAccount)
     }
 }

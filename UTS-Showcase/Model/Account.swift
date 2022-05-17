@@ -24,9 +24,11 @@ struct Account: Codable {
             
         } else {
             for index in 0..<currentData.count {
-                currentData[index].reserveStatus = reserveStatus
-                currentData[index].noOfTickets = noOfTickets
-                print("updated")
+                if (currentData[index].eventName == eventName) {
+                    currentData[index].reserveStatus = reserveStatus
+                    currentData[index].noOfTickets = noOfTickets
+                    print("updated")
+                }
             }
         }
         //everytime we make a change, this needs to be updated
