@@ -15,7 +15,6 @@ class ReservationViewController: UIViewController {
     @IBOutlet weak var ReservationTable: UITableView!
     @IBOutlet weak var WelcomeLabel: UILabel!
     
-    let udEventList = UDList()
     var reservationsList: [Event] = []
     
     //Function only executes once, to setup the view unless called by a segue
@@ -31,7 +30,7 @@ class ReservationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let currentUDList = udEventList.readEvents()
+        let currentUDList = UDList.shared.readEvents()
         //print("read events")
         
         for i in 0..<currentUDList.count {
@@ -84,7 +83,7 @@ extension ReservationViewController: UITableViewDataSource {
     @objc func cancelEvent(_ sender: UIButton) {
         let reservedEvent: [Int:Event] = sender.layer.value(forKey: "EventData") as! [Int:Event]
         
-        udEventList.updateEvent(title: Array(reservedEvent.values)[0].title, reservedStatus: false, numOfTickets: 1)
+        UDList.shared.updateEvent(title: Array(reservedEvent.values)[0].title, reservedStatus: false, numOfTickets: 1)
         reservationsList.remove(at: Array(reservedEvent.keys)[0])
         ReservationTable.reloadData()
         

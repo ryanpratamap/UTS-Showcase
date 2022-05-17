@@ -21,9 +21,8 @@ class EventViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let udEventList = UDList()
         eventTableView.rowHeight = 225
-        events = udEventList.readEvents()
+        events = UDList.shared.readEvents()
     }
 
 }
@@ -57,8 +56,7 @@ extension EventViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Update the event list by reading from user defaults again
-        let udEventList = UDList()
-        events = udEventList.readEvents()
+        events = UDList.shared.readEvents()
         
         //Obtain pressed event
         let eventInstance = events[indexPath.row]
