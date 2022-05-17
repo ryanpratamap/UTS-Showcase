@@ -17,17 +17,18 @@ struct Account: Codable {
     var currentData: [userData]
     
     mutating func updateAccountData(eventName: String, reserveStatus: Bool, noOfTickets: Int) {
-        for index in 0..<currentData.count {
-            if (!currentData.contains(where: {$0.eventName == eventName})) {
-                currentData.append(userData(eventName: eventName, reserveStatus: reserveStatus, noOfTickets: noOfTickets))
-                
-            } else {
+        print("outside")
+        if (!currentData.contains(where: {$0.eventName == eventName})) {
+            currentData.append(userData(eventName: eventName, reserveStatus: reserveStatus, noOfTickets: noOfTickets))
+            print("appended")
+            
+        } else {
+            for index in 0..<currentData.count {
                 currentData[index].reserveStatus = reserveStatus
                 currentData[index].noOfTickets = noOfTickets
+                print("updated")
             }
         }
-//        self.currentData.index[0]
-        
         //everytime we make a change, this needs to be updated
         //reservations, detail (press reserve and cancel)
         //updates currentData
