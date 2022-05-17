@@ -4,6 +4,11 @@
 //
 //  Created by Ryan Pratama Pangestu Lo on 16/5/22.
 //
+//  Edited by:
+//  Adrian Crespo Sanjines
+//  Elizabeth Kim
+//  Michele Paulosky
+//  Ryan Pratama Pangestu Lo
 
 import Foundation
 import UIKit

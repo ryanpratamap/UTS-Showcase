@@ -4,13 +4,18 @@
 //
 //  Created by Ryan Pratama Pangestu Lo on 3/5/22.
 //
+//  Edited by:
+//  Adrian Crespo Sanjines
+//  Elizabeth Kim
+//  Michele Paulosky
+//  Ryan Pratama Pangestu Lo
 
 import Foundation
 import UIKit
 
 class DetailViewController: UIViewController {
 
-
+    //Connections
     @IBOutlet weak var eventDetailTitleLabel: UILabel!
     @IBOutlet weak var eventDetailTimeLabel: UILabel!
     @IBOutlet weak var eventDetailLocation: UILabel!
@@ -19,7 +24,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var reservationButton: UIButton!
     @IBOutlet weak var numberOfTicketsLabel: UILabel!
     @IBOutlet weak var ticketQuantityStepper: UIStepper!
-    
+    //Internal variables for all fields of an event
+    //These receive their values from the EventViewController
     var detailTitle: String?
     var detailTime: String?
     var detailDate: String?

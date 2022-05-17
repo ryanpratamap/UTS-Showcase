@@ -4,6 +4,11 @@
 //
 //  Created by Michele Paulosky on 5/13/22.
 //
+//  Edited by:
+//  Adrian Crespo Sanjines
+//  Elizabeth Kim
+//  Michele Paulosky
+//  Ryan Pratama Pangestu Lo
 
 import UIKit
 
