@@ -13,7 +13,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    //Connections
     @IBOutlet weak var studentNoTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -21,39 +21,42 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+    //Users will activate switch when they do not have a student ID
     @IBAction func studentNoSwitch(_ sender: UISwitch) {
         if sender.isOn { //on tapping switch
             studentNoTextField.isEnabled = false
-            currentAccount.notAStudent = true
+            currentAccount.notAStudent = true      //Set account type
             
         } else {
             studentNoTextField.isEnabled = true
             currentAccount.notAStudent = false
         }
     }
-    
+    //Login button pressed
     @IBAction func login(_ sender: UIButton) {
         //Write data only at login
-        //This acts as a "Reset" of event data
+        //This acts as a "Reset" of event data displayed on EventTableViewController
         UDList.shared.writeEvents()
-        
+        //Validate user name
         do {
             try isValidUsername(nameTextField.text!)
             
             if (currentAccount.notAStudent == false) {
+                //Only validate student id if the account type is student
                 try isValidStudentNo(studentNoTextField.text!)
                 currentAccount.id = studentNoTextField.text!
             }
             currentAccount.name = nameTextField.text!.capitalizingFirstLetter()
-            
+            //Instantiate tab bar controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
         
             // To get SceneDelegate object and call the function to change to main tab bar
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
             
-        } catch invalidNameError.invalidChars {
+        }
+        //Catch invalid user name and ID input and display error messages
+        catch invalidNameError.invalidChars {
             displayAlert("There are no special characters allowed in your name")
         } catch invalidNameError.invalidLength {
             displayAlert("Please enter characters between 2-20 for your name")
@@ -66,7 +69,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    //Custom error objects
     enum invalidNameError: Error {
         case invalidChars //only characters please!
         case invalidLength //between 3-19
@@ -76,7 +79,7 @@ class LoginViewController: UIViewController {
         case invalidChars //only numbers
         case invalidLength //only 8 characters
     }
-
+    //Display error message
     func displayAlert(_ errorMsg: String) {
             // Declare Alert message
             let dialogMessage = UIAlertController(title: "Error", message: errorMsg, preferredStyle: .alert)
@@ -92,7 +95,9 @@ class LoginViewController: UIViewController {
             // Present dialog message to user
             self.present(dialogMessage, animated: true, completion: nil)
         }
-
+    /*
+     Function to validate user name
+     */
     func isValidUsername(_ name: String, _ forbiddenChars: String = "@#$%&*()^<>!±_,.1234567890", _ lengthRange: Range<Int> = 2..<20) throws {
         guard  lengthRange ~= name.count else {
             throw invalidNameError.invalidLength
@@ -101,7 +106,9 @@ class LoginViewController: UIViewController {
             throw invalidNameError.invalidChars
         }
     }
-    
+    /*
+     Function to validate student number
+     */
     func isValidStudentNo(_ number: String, _ forbiddenChars: String = "@#$%&*()^<>!±_abcdefghijklmnopqrstuvwxyz", _ length: Int = 8) throws {
         guard  length ~= number.count else {
             throw invalidStudentNo.invalidLength
@@ -110,16 +117,11 @@ class LoginViewController: UIViewController {
             throw invalidStudentNo.invalidChars
         }
     }
-
-    
-    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*if segue.identifier == "goToEvents" {
-            let VC = segue.destination as! EventViewController
-            VC.name = nameTextField.text!
-        }*/
-    //}
 }
 
+/*
+ Capitalize first letter of name
+ */
 extension String {
     func capitalizingFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
