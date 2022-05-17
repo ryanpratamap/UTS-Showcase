@@ -31,7 +31,6 @@ struct Account: Codable {
         }
         //everytime we make a change, this needs to be updated
         //reservations, detail (press reserve and cancel)
-        //updates currentData
         
     }
     //in the UDAccountList, append to user data
