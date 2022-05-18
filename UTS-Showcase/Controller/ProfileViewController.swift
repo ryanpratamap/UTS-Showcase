@@ -14,7 +14,7 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    //Connections
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var studentIDLabel: UILabel!
     
@@ -32,7 +32,9 @@ class ProfileViewController: UIViewController {
         // Set name label
         nameLabel.text = "Name: \(currentAccount.name)"
     }
-    
+    /*
+     Function that logs out user and transitions to Login screen
+     */
     @IBAction func logout(_ sender: UIButton) {
         // Reset notAStudent variable
         currentAccount.notAStudent = false

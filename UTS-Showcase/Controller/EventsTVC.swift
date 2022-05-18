@@ -11,9 +11,9 @@
 //  Ryan Pratama Pangestu Lo
 
 import UIKit
-
+//EventsTVC is a CocoaTouch file of type UITableViewCell
 class EventsTVC: UITableViewCell {
-
+    //By connecting all cell contects and setting the cell to be of type EventsTVC we can access them similar to class attributes
     @IBOutlet weak var eventView: UIView!
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var eventDateLabel: UILabel!

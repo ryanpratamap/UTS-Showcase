@@ -11,9 +11,9 @@
 //  Ryan Pratama Pangestu Lo
 
 import UIKit
-
+//ReservationTVC is a CocoaTouch file of type UITableViewCell
 class ReservationTVC: UITableViewCell {
-    
+    //By connecting all cell contects and setting the cell to be of type EventsTVC we can access them similar to class attributes
     @IBOutlet weak var reservedEventImageView: UIImageView!
     @IBOutlet weak var reservedEventNameLabel: UILabel!
     @IBOutlet weak var reservedEventDateLabel: UILabel!
