@@ -69,8 +69,9 @@ extension ReservationViewController: UITableViewDataSource {
         cell.reservedEventTimeLabel.text = eventInstance.time
         cell.reservedEventLocationLabel.text = eventInstance.location
         cell.reservedTicketsLabel.text = "Tickets: " + String(eventInstance.noOfTickets)
+        //User can view QR code for reserved tickets
         cell.viewQRButton.addTarget(self, action: #selector(goToQRPage), for: .touchUpInside)
-        
+        //Dictionary to access event information when cancelling an event
         let reservedEvent: [Int:Event] = [indexPath.row : eventInstance]
         cell.cancelButton.layer.setValue(reservedEvent, forKey: "EventData")
         cell.cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
@@ -78,20 +79,27 @@ extension ReservationViewController: UITableViewDataSource {
         // Return the cell to TableView
         return cell;
     }
-    
+    /*
+     Function that transitions to QRCodeViewController where user can see QR Codes
+     */
     @objc func goToQRPage() {
         let vc = storyboard?.instantiateViewController(identifier: "QRCodeViewController") as! QRCodeViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+    /*
+     Function that cancels a reservation for an event
+     Updating user defaults information
+     */
     @objc func cancelEvent(_ sender: UIButton) {
+        //Instantiate dictionary
         let reservedEvent: [Int:Event] = sender.layer.value(forKey: "EventData") as! [Int:Event]
-        
+        //Call update event function using dictionary, and setting reservation status and number of tickets
         UDList.shared.updateEvent(title: Array(reservedEvent.values)[0].title, reservedStatus: false, numOfTickets: 1)
+        //Update reservation list
         reservationsList.remove(at: Array(reservedEvent.keys)[0])
+        //Update reservation table view
         ReservationTable.reloadData()
-        
+        //Update currentAccount with new information
         currentAccount.updateAccountData(eventName: Array(reservedEvent.values)[0].title, reserveStatus: false, noOfTickets: 1)
-        print(currentAccount)
     }
 }
