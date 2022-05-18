@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        // change the root view controller to specified view controller
+        // Change the root view controller to specified view controller
         window.rootViewController = vc
     }
 

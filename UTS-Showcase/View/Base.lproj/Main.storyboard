@@ -126,7 +126,7 @@
                     <navigationItem key="navigationItem" id="Y1Z-sj-EYV"/>
                     <connections>
                         <outlet property="nameTextField" destination="Pqm-Bn-zLq" id="ww4-er-i5Z"/>
-                        <outlet property="studentNoTextField" destination="L04-hk-Vt9" id="eX5-2C-55M"/>
+                        <outlet property="studentIDTextField" destination="L04-hk-Vt9" id="eX5-2C-55M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

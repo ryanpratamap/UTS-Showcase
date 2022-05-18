@@ -14,7 +14,7 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController {
-    //Connections
+    // Connections
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var studentIDLabel: UILabel!
     
@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         // Hide the StudentID label if the user is not a student
-        if (currentAccount.notAStudent) {
+        if (!currentAccount.isStudent) {
             studentIDLabel.isHidden = true
         } else {
             studentIDLabel.isHidden = false
@@ -32,17 +32,15 @@ class ProfileViewController: UIViewController {
         // Set name label
         nameLabel.text = "Name: \(currentAccount.name)"
     }
-    /*
-     Function that logs out user and transitions to Login screen
-     */
+    
+    // Logout button pressed
     @IBAction func logout(_ sender: UIButton) {
-        // Reset notAStudent variable
-        currentAccount.notAStudent = false
+        // Reset isStudent variable
+        currentAccount.isStudent = true
         
         // Redirect to Login Page
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginNavigationController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController")
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavigationController)
     }
-    
 }

@@ -12,42 +12,44 @@
 
 import Foundation
 import UIKit
-//Event list key
+
+// Event list key
 let EVENTS_LIST_KEY = "events"
 
 class EventViewController: UIViewController {
-    //Connections
+    // Connections
     @IBOutlet weak var eventTableView: UITableView!
     @IBOutlet weak var welcomeLabel: UILabel!
-    //Event list
+    
+    // Event list
     var events: [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //Custon cell height
+        
+        // Custom cell height
         eventTableView.rowHeight = 225
-        //read from user defaults
+        
+        // Read from User Defaults
         events = UDList.shared.readEvents()
     }
 
 }
-//Table data source
+
+// Table data source
 extension EventViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //Display number of events in array
+        // Return number of events in array
         return events.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         // Dequed a reusable cell from the table view
         let cell = eventTableView.dequeueReusableCell(withIdentifier: "eventObj", for: indexPath) as! EventsTVC;
         
-        // Updated the UI for this Cell
+        // Update the UI for this Cell
         let eventInstance = events[indexPath.row]
-        
         cell.eventNameLabel.text = eventInstance.title;
         cell.eventDateLabel.text = eventInstance.date;
         cell.eventTimeLabel.text = eventInstance.time;
@@ -55,32 +57,33 @@ extension EventViewController: UITableViewDataSource {
         
         // Return the cell to TableView
         return cell;
-        
     }
 }
 
+// Table delegate
 extension EventViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Update the event list by reading from user defaults again
+        // Update the event list by reading from user defaults again
         events = UDList.shared.readEvents()
         
-        //Obtain pressed event
+        // Obtain pressed event
         let eventInstance = events[indexPath.row]
-        //Instantiate DetailViewController
+        
+        // Instantiate DetailViewController
         let vc = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        //Pass all relevant information
+        
+        // Pass all relevant information
         vc.detailTitle = eventInstance.title
+        vc.detailImageName = eventInstance.imageName
+        vc.detailDate = eventInstance.date
         vc.detailTime = eventInstance.time
         vc.detailLocation = eventInstance.location
-        vc.detailImageName = eventInstance.imageName
-        vc.detailNumberOfTickets = eventInstance.noOfTickets
-        vc.detailDate = eventInstance.date
         vc.detailDescription = eventInstance.description
+        vc.detailNumberOfTickets = eventInstance.noOfTickets
         vc.detailIsReserved = eventInstance.isReserved
-        //Transition to DetailViewController
-        self.navigationController?.pushViewController(vc, animated: true)
-        vc.navigationItem.setHidesBackButton(false, animated: true)
         
+        // Transition to DetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

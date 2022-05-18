@@ -3,6 +3,7 @@
 //  UTS-Showcase
 //
 //  Created by Elizabeth Kim on 6/5/22.
+//
 //  Edited by:
 //  Adrian Crespo Sanjines
 //  Elizabeth Kim
@@ -13,15 +14,15 @@ import Foundation
 import UIKit
 
 /*
- Event structure.
+ Event Structure
  */
 struct Event: Codable {
-    var title: String       //event title
-    var date: String         //event date
-    var time: String        //event time
-    var location: String      //event location
-    var description: String      //event description
-    var imageName: String       //event image name
-    var isReserved: Bool        //event reservation status
-    var noOfTickets: Int   //number of tickets user will reserve
+    var title: String        // Event title
+    var date: String         // Event date
+    var time: String         // Event time
+    var location: String     // Event location
+    var description: String  // Event description
+    var imageName: String    // Event image name
+    var isReserved: Bool     // Event reservation status
+    var noOfTickets: Int     // Number of tickets user will reserve
 }

@@ -14,24 +14,25 @@ import Foundation
 import UIKit
 
 /*
- Accounts structure
+ Account Structure
  */
 struct Account: Codable {
-    var id: String          //Students will have an id
-    var name: String        //All users have names
-    var notAStudent: Bool    //flag to determine if user is a student or guest
-    var currentData: [userData]     //array of user data
+    var id: String               // Students will have an ID
+    var name: String             // All users have names
+    var isStudent: Bool        // Flag to determine if user is a student or guest
+    var currentData: [userData]  // Array of user data
     
     /*
      Function to update account data array
      Updates event reservation status and number of tickets
      */
     mutating func updateAccountData(eventName: String, reserveStatus: Bool, noOfTickets: Int) {
-        //If the current data array does not contain the event. Append it.
+        // If the current data array does not contain the event, append it
         if (!currentData.contains(where: {$0.eventName == eventName})) {
             currentData.append(userData(eventName: eventName, reserveStatus: reserveStatus, noOfTickets: noOfTickets))
-            
-        } else {        //Else search for the event name in current data array and update fields
+        }
+        // Else, search for the event name in current data array and update fields
+        else {
             for index in 0..<currentData.count {
                 if (currentData[index].eventName == eventName) {
                     currentData[index].reserveStatus = reserveStatus
@@ -41,8 +42,9 @@ struct Account: Codable {
         }
     }
 }
+
 /*
- User data structure
+ User Data Structure
  Contains all user-relevant information from all events
  */
 struct userData: Codable {
@@ -50,5 +52,6 @@ struct userData: Codable {
     var reserveStatus: Bool
     var noOfTickets: Int
 }
-//local account, global variable
-var currentAccount = Account(id: "12345678" , name: "placeholder", notAStudent: false, currentData: [])
+
+// Local account, global variable
+var currentAccount = Account(id: "12345678" , name: "placeholder", isStudent: true, currentData: [])

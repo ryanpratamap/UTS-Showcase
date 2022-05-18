@@ -11,9 +11,10 @@
 //  Ryan Pratama Pangestu Lo
 
 import UIKit
-//EventsTVC is a CocoaTouch file of type UITableViewCell
+
+// EventsTVC is a CocoaTouch file of type UITableViewCell
 class EventsTVC: UITableViewCell {
-    //By connecting all cell contects and setting the cell to be of type EventsTVC we can access them similar to class attributes
+    // By connecting all cell contexts and setting the cell to be of type EventsTVC, we can access them similar to class attributes
     @IBOutlet weak var eventView: UIView!
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var eventDateLabel: UILabel!
@@ -22,14 +23,10 @@ class EventsTVC: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
