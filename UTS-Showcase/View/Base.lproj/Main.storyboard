@@ -319,30 +319,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frP-d9-nDF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frP-d9-nDF">
                                 <rect key="frame" x="45" y="78" width="325" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="liZ-UO-Xa0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student ID: &lt;number&gt;" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb8-TD-sF3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student ID: &lt;number&gt;" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb8-TD-sF3">
                                 <rect key="frame" x="45" y="173" width="354" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Hlx-r5-aoh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: &lt;name&gt;" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1s-pD-rCE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: &lt;name&gt;" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1s-pD-rCE">
                                 <rect key="frame" x="45" y="233" width="354" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="yJN-L7-ga6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e9-wR-vkP">
-                                <rect key="frame" x="87" y="725" width="240" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e9-wR-vkP">
+                                <rect key="frame" x="87" y="717" width="240" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="cco-O8-pLR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Logout">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
@@ -354,6 +362,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3e0-a2-sbK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1s-pD-rCE" firstAttribute="top" secondItem="3e0-a2-sbK" secondAttribute="top" constant="189" id="5iA-Yf-7JW"/>
+                            <constraint firstItem="frP-d9-nDF" firstAttribute="leading" secondItem="3e0-a2-sbK" secondAttribute="leading" constant="45" id="5kq-2l-zTp"/>
+                            <constraint firstItem="Y1s-pD-rCE" firstAttribute="leading" secondItem="3e0-a2-sbK" secondAttribute="leading" constant="45" id="8ps-y7-bWD"/>
+                            <constraint firstItem="frP-d9-nDF" firstAttribute="top" secondItem="3e0-a2-sbK" secondAttribute="top" constant="34" id="E1f-Hw-TIs"/>
+                            <constraint firstItem="3e0-a2-sbK" firstAttribute="trailing" secondItem="frP-d9-nDF" secondAttribute="trailing" constant="44" id="KE6-2n-U2K"/>
+                            <constraint firstItem="kb8-TD-sF3" firstAttribute="leading" secondItem="3e0-a2-sbK" secondAttribute="leading" constant="45" id="OVR-Yx-PuX"/>
+                            <constraint firstItem="3e0-a2-sbK" firstAttribute="trailing" secondItem="kb8-TD-sF3" secondAttribute="trailing" constant="15" id="OoT-qI-WHl"/>
+                            <constraint firstItem="1e9-wR-vkP" firstAttribute="leading" secondItem="3e0-a2-sbK" secondAttribute="leading" constant="87" id="VC1-Hp-cPh"/>
+                            <constraint firstItem="3e0-a2-sbK" firstAttribute="trailing" secondItem="1e9-wR-vkP" secondAttribute="trailing" constant="87" id="VKp-Fq-Gpm"/>
+                            <constraint firstItem="kb8-TD-sF3" firstAttribute="top" secondItem="RMe-ar-xnj" secondAttribute="top" constant="173" id="dCh-zh-m61"/>
+                            <constraint firstItem="3e0-a2-sbK" firstAttribute="trailing" secondItem="Y1s-pD-rCE" secondAttribute="trailing" constant="15" id="eIX-5m-Lhc"/>
+                            <constraint firstItem="3e0-a2-sbK" firstAttribute="bottom" secondItem="1e9-wR-vkP" secondAttribute="bottom" constant="54" id="j2w-08-xDS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="5J1-J2-mJZ"/>
                     <connections>
